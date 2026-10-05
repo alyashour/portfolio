@@ -1,6 +1,6 @@
 # Perception Atelier — current portfolio direction
 
-This extends the original Stone Gallery foundation. The live site uses sculptural editorial composition, Anton headlines, Inter prose, and image-derived page palettes. The approved annotation reference is `moodboards/perception-atelier-waypoint-01.html`; the live overlay is `public/design-system/perception-atelier-overlay.svg`.
+This extends the original Stone Gallery foundation. The live site uses sculptural editorial composition, Anton headlines, Inter prose, and image-derived page palettes. The historical waypoint reference is `moodboards/perception-atelier-waypoint-01.html`; the live overlay is `public/design-system/perception-atelier-overlay.svg`.
 
 ## Required for future images
 
@@ -13,7 +13,7 @@ Current reference: espresso `#241e19`, bone `#eee4d2`, sandstone `#b39770`, bron
 
 - Thin light-neutral open-corner boxes, with a faint complete perimeter. In the reference’s 1536 × 1024 coordinates: 1.2-unit primary stroke; 0.65-unit faint stroke at 55% opacity; approximately 24–28-unit corner lengths.
 - Boxes fit identifiable subjects tightly without cutting them off. Sparse 2.5-unit landmark dots and subtle links are optional.
-- Bronze perspective volumes are optional when well aligned to the subject; the saved waypoint’s torso volume is the approved existing example.
+- Bronze perspective volumes are optional when well aligned to the subject; the current sculpture uses only three face boxes. Its torso volume, landmark dots, and connecting lines have been removed.
 - No on-image text, decorative labels, label leader lines, or neon HUD effects. Sightlines, angle estimates, snake splines, and the bottom/right planes were rejected for this reference and must not return by default.
 - The overlays are artistic perception studies, not results from a real vision model. Never present invented confidence scores or measurements.
 
