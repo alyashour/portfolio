@@ -1,0 +1,33 @@
+/* Canopy palette only; retain the existing collection layout. */
+body.sculptural-editorial.fresco-projects {
+  --color-bg:#20271d; --color-text:#e8e9d8; --color-text-secondary:#c9cfb6;
+  --color-text-muted:#c9cfb6; --color-text-faint:#c9cfb6;
+  --color-accent:#e8e9d8; --color-accent-hover:#c9cfb6;
+  --color-border:#657153; --color-border-strong:#9da781;
+  --color-panel-bg:#30392a; --color-thumb-border:#30392a;
+  --collection-cover-bg:#20271d;
+  --collection-image-position:right 38%;
+  --collection-image-position-mobile:65% center;
+  --collection-description-color:#c9cfb6;
+  --collection-cover-fade:linear-gradient(180deg,rgba(32,39,29,.7),transparent 20%),linear-gradient(90deg,rgba(32,39,29,.3),rgba(32,39,29,0) 70%),linear-gradient(0deg,#20271d,rgba(32,39,29,.15) 24%,transparent 50%);
+  background:#e8e9d8;
+}
+body.fresco-projects .page { background:var(--color-bg); color:var(--color-text); }
+body.fresco-projects :focus-visible { outline-color:var(--color-text); }
+body.fresco-projects .collection-surface {
+  --color-text:#20271d; --color-text-secondary:#525e46;
+  --color-accent:#465d35; --color-accent-hover:#344728;
+  --color-border:#a4ae91; --color-thumb-border:transparent;
+  background:#e8e9d8;
+}
+body.fresco-projects .collection-surface .filter-bar,
+body.fresco-projects .collection-surface .project-card-github { border-color:var(--color-border); }
+body.fresco-projects .collection-surface .filter-btn,
+body.fresco-projects .collection-surface .badge { color:var(--color-text-secondary); }
+body.fresco-projects .collection-surface .filter-btn.is-active { color:var(--color-accent); box-shadow:0 2px var(--color-accent); }
+body.fresco-projects .collection-surface .project-card-img { background:#20271d; }
+body.fresco-projects .collection-surface :focus-visible { outline-color:var(--color-accent); }
+
+@media(max-width:650px) {
+  body.sculptural-editorial.fresco-projects { --collection-cover-fade:linear-gradient(180deg,rgba(32,39,29,.75),transparent 24%),linear-gradient(90deg,rgba(32,39,29,.72),rgba(32,39,29,.1) 90%),linear-gradient(0deg,#20271d,rgba(32,39,29,.5) 25%,transparent 65%); }
+}

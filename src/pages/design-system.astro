@@ -77,9 +77,17 @@ const colors = [
           </figure>
           <div class="sg-grid perception-guidance">
             <div><h3 class="sg-subheading">Palette per page</h3><p class="sg-muted prose">Choose a dark anchor, light neutral, middle tone, and restrained accent from the image. Derive readable text and focus colors from these; use the palette for that page’s navigation, sections, footer, and annotations. Preserve meaningful colors in technical figures.</p><p class="sg-code">Sculpture: #241E19 / #EEE4D2 / #B39770 / #796440</p></div>
-            <div><h3 class="sg-subheading">A consistent visual grammar</h3><p class="sg-muted prose">Thin open-corner bounding boxes fit identifiable subjects. Fine translucent outlines, sparse landmark dots, remain secondary to the image. The current sculpture uses only three face boxes, with no torso volume, landmark dots, or connecting lines. No decorative labels, leader lines, sightlines, angle estimates, or snake spline. These are artistic annotations, not measured model outputs.</p></div>
+            <div><h3 class="sg-subheading">A consistent visual grammar</h3><p class="sg-muted prose">Thin open-corner bounding boxes fit identifiable subjects. Use light-neutral outlines by default, or dark image-derived outlines on light images for visibility. Fine translucent outlines, sparse landmark dots, remain secondary to the image. The current sculpture uses only three face boxes, with no torso volume, landmark dots, or connecting lines. No decorative labels, leader lines, sightlines, angle estimates, or snake spline. These are artistic annotations, not measured model outputs.</p></div>
           </div>
           <p class="sg-muted prose">Author annotations in the source image’s coordinate space. Image and SVG must share aspect ratio, fit, crop, and position at every breakpoint. New images need their own manually fitted boxes; never reuse sculpture coordinates. Keep annotations decorative and leave essential information in page text.</p>
+          <figure class="fresco-contrast-study">
+            <div class="fresco-specimen"><img src="/design-system/fresco-source.jpeg" alt="Weathered fresco with three prominent figures, annotated with dark umber face boxes." width="768" height="1024" /><img src="/design-system/fresco-overlay.svg" alt="" aria-hidden="true" width="768" height="1024" /></div>
+            <figcaption><span class="sg-code">FRESCO / LIGHT-IMAGE CONTRAST</span><span>Umber #302A25 · 2px corners · 1px faint perimeter</span></figcaption>
+          </figure>
+          <figure>
+            <div class="perception-specimen"><img src="/design-system/canopy-editorial-v2.png" alt="Generated landscape reinterpretation of a mossy rock gorge with artistic surface planes." width="1536" height="1024" /><img src="/design-system/canopy-shade.svg" alt="" aria-hidden="true" width="1536" height="1024" /></div>
+            <figcaption><span class="sg-code">CANOPY / ARTISTIC SURFACE PLANES</span><span>User-authored shade overlay · Translucent geometry</span></figcaption>
+          </figure>
           <a class="sg-text-link" href="/">See the live application ↗</a>
         </section>
         <section class="sg-section" id="principles">
@@ -92,6 +100,9 @@ const colors = [
   </body>
 </html>
 <style>
+  .fresco-contrast-study { margin-block: 2rem; max-width: 480px; }
+  .fresco-specimen { position:relative; aspect-ratio:3/4; }
+  .fresco-specimen img { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; }
   .perception-specimen { position:relative; aspect-ratio:3/2; margin-top:2rem; background:#241e19; }
   .perception-specimen img { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; }
   .perception-guidance { margin-top:2.5rem; }

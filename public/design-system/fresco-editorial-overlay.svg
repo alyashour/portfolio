@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" fill="none" stroke="#302a25" stroke-width="2">
+<style>path,rect{vector-effect:non-scaling-stroke}</style>
+<title>Artistic face boxes fitted to the generated fresco composition</title>
+<rect x="745" y="460" width="125" height="133" stroke-width="1" opacity="0.55"/>
+<path d="M745 484V460H769 M846 460H870V484 M870 569V593H846 M769 593H745V569"/>
+<rect x="1130" y="169" width="166" height="170" stroke-width="1" opacity="0.55"/>
+<path d="M1130 193V169H1154 M1272 169H1296V193 M1296 315V339H1272 M1154 339H1130V315"/>
+<rect x="1355" y="148" width="134" height="155" stroke-width="1" opacity="0.55"/>
+<path d="M1355 172V148H1379 M1465 148H1489V172 M1489 279V303H1465 M1379 303H1355V279"/>
+</svg>

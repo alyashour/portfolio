@@ -7,11 +7,12 @@ import SiteFooter from "../components/SiteFooter.astro";
 
 interface Props {
   title: string;
+  pageClass?: string;
   theme?: 'stone' | 'editorial';
   active?: "about" | "experience" | "projects" | "blog" | "contact";
 }
 
-const { title, active, theme } = Astro.props as Props;
+const { title, active, theme, pageClass } = Astro.props as Props;
 ---
 
 <html lang="en">
@@ -23,7 +24,7 @@ const { title, active, theme } = Astro.props as Props;
     {theme === 'stone' && <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />}
     {theme === 'editorial' && <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />}
   </head>
-  <body class={theme === 'stone' ? 'stone-gallery portfolio-stone' : theme === 'editorial' ? 'sculptural-editorial' : undefined}>
+  <body class:list={[pageClass, theme === 'stone' ? 'stone-gallery portfolio-stone' : theme === 'editorial' ? 'sculptural-editorial' : undefined]}>
     <div class="page">
       <SiteHeader active={active} minimal={theme === 'editorial'} />
       <slot />
