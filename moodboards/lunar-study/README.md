@@ -1,0 +1,7 @@
+# Lunar / Field Notes — blog mood board
+
+Generated with the built-in image tool from the supplied moon photograph. This is a visual study; the blog page is unchanged. Topic rows and navigation are illustrative placeholders.
+
+Direction: midnight navy, slate blue, lunar ivory, restrained optical green. Anton-style headlines, Inter-style prose, fine rules, asymmetric moon hero and numbered editorial rows.
+
+Generation prompt: Create a polished landscape website style mood board for an engineering portfolio blog based on the supplied photograph of the moon through an optical instrument with soft green lens reflections. Follow Sculptural Editorial / Perception Atelier: oversized condensed headings, clean body text, asymmetric editorial composition, fine rules, generous spacing, no card shadows. Reference controls warm cratered moon upper right, midnight navy left negative space, slate-blue/lavender field and restrained green optical reflections. Palette: MIDNIGHT #07131F, SLATE #53637E, LUNAR IVORY #F0DFC2, OPTICAL GREEN #7DA77B. Show a dominant wide hero with FIELD NOTES and Ideas, experiments & observations; below a numbered article-list study with Graphics, Systems, Observations placeholders, no fabricated posts or dates. Include moon texture crop and Aa / FIELD NOTES typography. Optional single-color open-corner moon box; no scores, measurements, grids or HUD effects. Atmospheric, observational, precise. Landscape 1536x1024 or higher.

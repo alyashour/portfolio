@@ -1,12 +1,15 @@
 ---
-import CollectionHero from "../../components/CollectionHero.astro";
+import "../../styles/lunar-blog.css";
 import "../../styles/collections.css";
 import SiteLayout from "../../layouts/SiteLayout.astro";
 ---
 
-<SiteLayout title="Blog — Aly Ashour" active="blog" theme="editorial">
+<SiteLayout title="Blog — Aly Ashour" active="blog" theme="editorial" pageClass="lunar-blog">
   <main>
-  <CollectionHero eyebrow="Notes / Ideas / Process" title="BLOG" description="A notebook for engineering, experiments, and the things that catch my attention." />
+  <section class="lunar-cover" aria-labelledby="blog-title">
+    <div class="lunar-art"><img src="/design-system/lunar-hero-v1.png" alt="" aria-hidden="true" width="1536" height="1024" fetchpriority="high" /><img src="/design-system/lunar-overlay.svg" alt="" aria-hidden="true" width="1536" height="1024" /></div>
+    <div class="lunar-copy"><p class="notebook-label">Blog / Notes / Process</p><h1 id="blog-title">FIELD NOTES</h1><p class="lunar-lede">Ideas, experiments &amp; observations</p></div>
+  </section>
   <div class="collection-surface">
   <div class="collection-inner notebook-layout">
   <section>
@@ -14,21 +17,21 @@ import SiteLayout from "../../layouts/SiteLayout.astro";
     <h2>More to come.</h2>
     <p class="notebook-copy">Longer project write-ups and notes will land here over time. In the meantime, explore what I’ve been building.</p>
     <a class="notebook-link" href="/projects/">Explore projects ↗</a>
-    <img class="stone-detail" src="/design-system/sculpture.jpeg" alt="Detail of a classical marble sculpture" width="1024" height="768" loading="lazy" />
+    <img class="stone-detail" src="/design-system/lunar-hero-v1.png" alt="Warm cratered moon seen through an optical instrument" width="1536" height="1024" loading="lazy" />
   </section>
   <section>
     <p class="notebook-label">On the bookshelf</p>
     <h2 class="list-heading">Currently reading</h2>
     <div class="reading-list">
-      <div class="reading-row">
+      <div class="reading-row"><span class="reading-number" aria-hidden="true">01</span>
         <span class="reading-title">Modern C</span>
         <span class="reading-author">Jens Gustedt</span>
       </div>
-      <div class="reading-row">
+      <div class="reading-row"><span class="reading-number" aria-hidden="true">02</span>
         <span class="reading-title">Fighting the Great War</span>
         <span class="reading-author">M.S. Neiberg</span>
       </div>
-      <div class="reading-row reading-row-last">
+      <div class="reading-row reading-row-last"><span class="reading-number" aria-hidden="true">03</span>
         <span class="reading-title">Nineteen Eighty-Four</span>
         <span class="reading-author">George Orwell</span>
       </div>
@@ -43,12 +46,13 @@ import SiteLayout from "../../layouts/SiteLayout.astro";
 .notebook-layout { display:grid; grid-template-columns:1.2fr 1fr; gap:clamp(40px,8vw,120px); }
 .notebook-label { font-size:11px; text-transform:uppercase; letter-spacing:.18em; margin:0 0 24px; }
 h2,.list-heading { font-family:Anton,Impact,sans-serif; text-transform:uppercase; font-weight:400; font-size:clamp(2rem,4vw,3.8rem); line-height:1.15; margin:0 0 28px; }
-.notebook-copy { max-width:42ch; font-size:15px; line-height:1.8; color:#625747; }
-.notebook-link { display:inline-flex; align-items:center; min-height:44px; border-bottom:1px solid #c7bba7; font-size:13px; margin:12px 0 40px; }
-.stone-detail { display:block; width:100%; height:260px; object-fit:cover; object-position:center 25%; }
-.reading-row { border-top:1px solid #c7bba7; padding:28px 0; display:flex; flex-direction:column; gap:10px; }
-.reading-row:last-child { border-bottom:1px solid #c7bba7; }
-.reading-title { font-size:20px; font-weight:500; }
-.reading-author { font-size:13px; color:#625747; }
+.notebook-copy { max-width:42ch; font-size:15px; line-height:1.8; color:var(--color-text-secondary); }
+.notebook-link { display:inline-flex; align-items:center; min-height:44px; border-bottom:1px solid var(--color-border); font-size:13px; margin:12px 0 40px; }
+.stone-detail { display:block; width:100%; height:260px; object-fit:cover; object-position:right 30%; }
+.reading-row { border-top:1px solid var(--color-border); padding:28px 0; display:grid; grid-template-columns:60px 1fr; gap:10px 24px; }
+.reading-row:last-child { border-bottom:1px solid var(--color-border); }
+.reading-number { grid-column:1; grid-row:1 / 3; font:400 44px/1 Anton,Impact,sans-serif; color:var(--color-slate); }
+.reading-title { grid-column:2; grid-row:1; font-size:20px; font-weight:500; }
+.reading-author { grid-column:2; grid-row:2; font-size:13px; color:var(--color-text-secondary); }
 @media(max-width:650px) { .notebook-layout { grid-template-columns:1fr; gap:64px; } }
 </style>

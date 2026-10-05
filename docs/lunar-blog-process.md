@@ -1,0 +1,7 @@
+# Lunar blog direction
+
+Approved mood board: `moodboards/lunar-study/moodboard-01.png`. Source photo is preserved alongside it. The blog uses page-scoped midnight navy, lunar ivory, slate blue and optical green tokens. Existing notebook copy and reading list are preserved; no posts or dates are invented.
+
+Hero asset: `public/design-system/lunar-hero-v1.png`, generated with the built-in image tool. Prompt: Create only the seamless photographic hero background for the approved Lunar Field Notes mood board. Landscape 1536x1024. Original photo controls recognizable warm cratered moon and optical reflections; mood board controls midnight navy / slate blue / lunar ivory atmosphere and composition. Moon in right third, warm soft craters without oversharpening. Broad midnight #07131f negative space on left half, subtle slate #53637e haze, restrained soft optical green reflections toward bottom, smooth fade to midnight at bottom. Natural optical softness, no added galaxies, spacecraft or invented objects. No text, boxes, annotations, UI, swatches, typography, borders, collage or watermarks. Preserve optical character rather than idealized full moon. One seamless background with dark space for heading.
+
+The separate `lunar-overlay.svg` is an artistic box in the image's 1536 × 1024 coordinate space. Image and overlay use matching fit and position. Both are decorative. The moon image is a generated photographic reinterpretation, not an astronomical measurement.
