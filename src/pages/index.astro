@@ -7,16 +7,20 @@ import waves from '../assets/images/gernster-waves.gif';
 import cubes from '../assets/images/marching-cube-demo.gif';
 const projects = [
   { title: 'Dynamic Transport', subtitle:'Network design · Machine learning', image:transport, href:'/projects/dynamic-transport/', alt:'Transport network visualization', description:'Exploring how transport networks can adapt to changing demand.' },
-  { title: 'Gerstner Waves', subtitle:'C++ · OpenGL', image:waves, href:'/projects/gerstner-waves/', alt:'Rendered waves on a simulated water surface', description:'A study of movement, mathematics, and real-time graphics.' },
+  { title: 'Gerstner Waves', subtitle:'C++ · OpenGL', image:waves, href:'/projects/gerstner-waves/', alt:'Rendered waves on a simulated water surface', description:'Geometric shader to make realistic waves.' },
   { title: 'Marching Cubes', subtitle:'Python · OpenGL', image:cubes, href:'/projects/marching-cubes/', alt:'Surface extraction demonstration', description:'Finding form in volumetric data.' },
 ];
 ---
-<SiteLayout title="Aly Ashour — Robotics Engineering" theme="editorial">
+<SiteLayout title="Aly Ashour Portfolio" theme="editorial">
   <main>
     <EditorialHero />
     <div class="editorial-white">
       <section class="work-section" id="projects" aria-labelledby="projects-title">
-        <div class="section-top"><div><p class="label">Engineering / Explorations</p><h2 id="projects-title">Selected projects</h2></div><a href="/projects/">All projects <span aria-hidden="true">↗</span></a></div>
+        <div class="section-top">
+          <div>
+            <h2 id="projects-title">Selected Projects</h2>
+          </div>
+          <a href="/projects/">See more<span aria-hidden="true">↗</span></a></div>
         <div class="project-controls"><p class="scroll-hint" id="scroll-help">Scroll to explore</p><div><button type="button" data-project-prev aria-label="Previous project" aria-controls="project-track" disabled>←</button><button type="button" data-project-next aria-label="Next project" aria-controls="project-track">→</button></div></div>
         <div class="project-track" id="project-track" role="region" aria-label="Selected projects carousel" aria-describedby="scroll-help" tabindex="0">
         {projects.map(project=><article class="project-feature">
@@ -26,7 +30,7 @@ const projects = [
         </div>
       </section>
       <div class="material-strip" aria-hidden="true"><img src="/design-system/sculpture.jpeg" width="1024" height="768" alt="" loading="lazy" /><img src="/design-system/limestone.png" width="1536" height="1024" alt="" loading="lazy" /><img src="/design-system/sculpture.jpeg" width="1024" height="768" alt="" loading="lazy" /></div>
-      <section class="blog-section" id="blog" aria-labelledby="blog-title"><div class="section-top"><div><p class="label">Notes / Ideas / Process</p><h2 id="blog-title">From the notebook</h2></div><a href="/blog/">Blog <span aria-hidden="true">↗</span></a></div><div class="notebook"><p class="blog-title">Blog posts are on their way.</p><p>For now, explore the project write-ups and my current reading list.</p><a class="read-link" href="/blog/">Notes &amp; reading <span aria-hidden="true">↗</span></a></div></section>
+      <section class="blog-section" id="blog" aria-labelledby="blog-title"><div class="section-top"><div><p class="label">My Notes</p><h2 id="blog-title">Field Guide</h2></div><a href="/blog/">Click me! <span aria-hidden="true">↗</span></a></div><div class="notebook"><p class="blog-title">Blog posts are on their way.</p><p>For now, explore the project write-ups and my current reading list.</p><a class="read-link" href="/blog/">Notes &amp; reading <span aria-hidden="true">↗</span></a></div></section>
       <section class="contact-section" id="contact"><p class="label">Continue the conversation</p><h2>Let’s connect.</h2><div class="contact-links"><a href="https://github.com/alyashour">GitHub ↗</a><a href="https://www.linkedin.com/in/alymashour/">LinkedIn ↗</a></div></section>
     </div>
   </main>

@@ -9,4 +9,4 @@ Do `npm run astro build` to build static files.
 
 ## Images
 
-All images are taken by Aly Ashour and may be enhanced by AI for sharpness or color.
+All images are taken by me but may be enhanced by AI for sharpness or color.
