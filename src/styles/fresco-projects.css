@@ -1,10 +1,10 @@
 /* Canopy palette only; retain the existing collection layout. */
 body.sculptural-editorial.fresco-projects {
   --color-bg:#20271d; --color-text:#e8e9d8; --color-text-secondary:#c9cfb6;
-  --color-text-muted:#c9cfb6; --color-text-faint:#c9cfb6;
+  --color-text-muted:#c9cfb6;
   --color-accent:#e8e9d8; --color-accent-hover:#c9cfb6;
   --color-border:#657153; --color-border-strong:#9da781;
-  --color-panel-bg:#30392a; --color-thumb-border:#30392a;
+   --color-thumb-border:#30392a;
   --collection-cover-bg:#20271d;
   --collection-image-position:right 38%;
   --collection-image-position-mobile:65% center;

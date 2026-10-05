@@ -2,7 +2,7 @@
 
 ## Design system
 
-Before working on the site's design, read `docs/perception-atelier-design-system.md` and consult the visual specimen in `src/pages/design-system.astro` (`/design-system/`). The original foundation is `docs/stone-gallery-design-system.md`; the current Perception Atelier rules take precedence where they differ. Follow the design system for implementation and review, including page-specific image-derived palettes and consistent subject-fitted vision overlays.
+Before working on the site's design, read `docs/perception-atelier-design-system.md` and consult the visual specimen in `src/pages/design-system.astro` (`/design-system/`). The original Stone Gallery foundation is preserved in the visual specimen; the current Perception Atelier rules take precedence where they differ. Follow the design system for implementation and review, including page-specific image-derived palettes and consistent subject-fitted vision overlays.
 
 If a requested change conflicts with the design system, explicitly identify the conflict and formally ask the user whether to treat it as a design-system change. Do not implement the conflicting change until the user approves it. Once approved, update the design-system documentation and visual specimen first, then apply the change to the site. An explicit user request to change the design system itself counts as approval for that specified change.
 

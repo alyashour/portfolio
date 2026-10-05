@@ -1,10 +1,12 @@
 ---
+import assetSculpture from '../assets/editorial/sculpture.jpeg';
+import assetLimestone from '../assets/textures/limestone.png';
 import SiteLayout from '../layouts/SiteLayout.astro';
 import EditorialHero from '../components/EditorialHero.astro';
 import { Image } from 'astro:assets';
-import transport from '../assets/images/dyn_transport.png';
-import waves from '../assets/images/gernster-waves.gif';
-import cubes from '../assets/images/marching-cube-demo.gif';
+import transport from '../assets/projects/dyn_transport.png';
+import waves from '../assets/projects/gernster-waves.gif';
+import cubes from '../assets/projects/marching-cube-demo.gif';
 const projects = [
   { title: 'Dynamic Transport', subtitle:'Network design · Machine learning', image:transport, href:'/projects/dynamic-transport/', alt:'Transport network visualization', description:'Exploring how transport networks can adapt to changing demand.' },
   { title: 'Gerstner Waves', subtitle:'C++ · OpenGL', image:waves, href:'/projects/gerstner-waves/', alt:'Rendered waves on a simulated water surface', description:'Geometric shader to make realistic waves.' },
@@ -29,14 +31,14 @@ const projects = [
         </article>)}
         </div>
       </section>
-      <div class="material-strip" aria-hidden="true"><img src="/design-system/sculpture.jpeg" width="1024" height="768" alt="" loading="lazy" /><img src="/design-system/limestone.png" width="1536" height="1024" alt="" loading="lazy" /><img src="/design-system/sculpture.jpeg" width="1024" height="768" alt="" loading="lazy" /></div>
+      <div class="material-strip" aria-hidden="true"><img src={assetSculpture.src} width="1024" height="768" alt="" loading="lazy" /><img src={assetLimestone.src} width="1536" height="1024" alt="" loading="lazy" /><img src={assetSculpture.src} width="1024" height="768" alt="" loading="lazy" /></div>
       <section class="blog-section" id="blog" aria-labelledby="blog-title"><div class="section-top"><div><p class="label">My Notes</p><h2 id="blog-title">Field Guide</h2></div><a href="/blog/">Click me! <span aria-hidden="true">↗</span></a></div><div class="notebook"><p class="blog-title">Blog posts are on their way.</p><p>For now, explore the project write-ups and my current reading list.</p><a class="read-link" href="/blog/">Notes &amp; reading <span aria-hidden="true">↗</span></a></div></section>
       <section class="contact-section" id="contact"><p class="label">Continue the conversation</p><h2>Let’s connect.</h2><div class="contact-links"><a href="https://github.com/alyashour">GitHub ↗</a><a href="https://www.linkedin.com/in/alymashour/">LinkedIn ↗</a></div></section>
     </div>
   </main>
 </SiteLayout>
 <style>
-  .editorial-white { background-color:#f1e9db; background-image:linear-gradient(rgba(241,233,219,.9),rgba(241,233,219,.9)),url('/design-system/limestone.png'); background-size:auto,100% auto; color:#342a22; }
+  .editorial-white { background-color:#f1e9db; background-image:linear-gradient(rgba(241,233,219,.9),rgba(241,233,219,.9)),url('../assets/textures/limestone.png'); background-size:auto,100% auto; color:#342a22; }
   .project-track { display:flex; gap:2rem; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-color:#796440 #e4d7c3; scrollbar-width:thin; padding-bottom:1.5rem; }
   .project-controls { display:flex; align-items:center; justify-content:space-between; margin:-1rem 0 1.5rem; }
   .scroll-hint { font-size:.75rem; color:#6c5946; }

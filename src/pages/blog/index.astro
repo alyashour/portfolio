@@ -1,4 +1,6 @@
 ---
+import assetLunarHeroV1 from '../../assets/editorial/lunar-hero-v1.png';
+import assetLunarOverlay from '../../assets/overlays/lunar-overlay.svg';
 import "../../styles/lunar-blog.css";
 import "../../styles/collections.css";
 import SiteLayout from "../../layouts/SiteLayout.astro";
@@ -14,14 +16,14 @@ import SiteLayout from "../../layouts/SiteLayout.astro";
     <section class="lunar-cover" aria-labelledby="blog-title">
       <div class="lunar-art">
         <img
-          src="/design-system/lunar-hero-v1.png"
+          src={assetLunarHeroV1.src}
           alt=""
           aria-hidden="true"
           width="1536"
           height="1024"
           fetchpriority="high"
         /><img
-          src="/design-system/lunar-overlay.svg"
+          src={assetLunarOverlay.src}
           alt=""
           aria-hidden="true"
           width="1536"
@@ -30,7 +32,6 @@ import SiteLayout from "../../layouts/SiteLayout.astro";
       </div>
       <div class="lunar-copy">
         <h1 id="blog-title">FIELD NOTES</h1>
-        <!-- <p class="lunar-lede">For the curious.</p> -->
         <p class="notebook-label">“If you want to make an apple pie from scratch, you must first invent the universe.” — Carl Sagan</p>
       </div>
     </section>
@@ -46,7 +47,7 @@ import SiteLayout from "../../layouts/SiteLayout.astro";
           <a class="notebook-link" href="/projects/">Explore projects ↗</a>
           <img
             class="stone-detail"
-            src="/design-system/lunar-hero-v1.png"
+            src={assetLunarHeroV1.src}
             alt="Warm cratered moon seen through an optical instrument"
             width="1536"
             height="1024"
@@ -55,8 +56,8 @@ import SiteLayout from "../../layouts/SiteLayout.astro";
         </section>
         <section>
           <p class="notebook-label">On the bookshelf</p>
-          <h2 class="list-heading">Currently reading</h2>
-          <div class="reading-list">
+          <h2>Currently reading</h2>
+          <div >
             <div class="reading-row">
               <span class="reading-number" aria-hidden="true">01</span>
               <span class="reading-title">Modern C</span>
@@ -67,7 +68,7 @@ import SiteLayout from "../../layouts/SiteLayout.astro";
               <span class="reading-title">Fighting the Great War</span>
               <span class="reading-author">M.S. Neiberg</span>
             </div>
-            <div class="reading-row reading-row-last">
+            <div class="reading-row">
               <span class="reading-number" aria-hidden="true">03</span>
               <span class="reading-title">Nineteen Eighty-Four</span>
               <span class="reading-author">George Orwell</span>
@@ -92,8 +93,7 @@ import SiteLayout from "../../layouts/SiteLayout.astro";
     margin: 0 0 24px;
     width: 55ch;
   }
-  h2,
-  .list-heading {
+  h2 {
     font-family: Anton, Impact, sans-serif;
     text-transform: uppercase;
     font-weight: 400;

@@ -1,7 +1,7 @@
 body.sculptural-editorial .collection-surface {
   --color-text:#302820; --color-text-secondary:#625747; --color-accent:#51412d; --color-accent-hover:#302820;
   --color-border:#c7bba7; --color-thumb-border:transparent;
-  color:var(--color-text); background:linear-gradient(#f1e9dbe8,#f1e9dbe8),url('/design-system/limestone.png') center/900px;
+  color:var(--color-text); background:linear-gradient(#f1e9dbe8,#f1e9dbe8),url('../assets/textures/limestone.png') center/900px;
   padding:64px clamp(1.5rem,5vw,5rem) 100px;
 }
 .collection-inner { max-width:1320px; margin:auto; }

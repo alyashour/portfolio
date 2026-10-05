@@ -1,20 +1,22 @@
 ---
+import assetCanopyEditorialV2 from '../../assets/editorial/canopy-editorial-v2.png';
+import assetCanopyShade from '../../assets/overlays/canopy-shade.svg';
 import SiteLayout from "../../layouts/SiteLayout.astro";
 import CollectionHero from "../../components/CollectionHero.astro";
 import "../../styles/collections.css";
 import "../../styles/fresco-projects.css";
 import ProjectCard from "../../components/ProjectCard.astro";
-import dynTransport from "../../assets/images/dyn_transport.png";
-import gerstnerWaves from "../../assets/images/gernster-waves.gif";
-import marchingCubes from "../../assets/images/marching-cube-demo.gif";
-import bezierCurve from "../../assets/images/bezier-demo.gif";
+import dynTransport from "../../assets/projects/dyn_transport.png";
+import gerstnerWaves from "../../assets/projects/gernster-waves.gif";
+import marchingCubes from "../../assets/projects/marching-cube-demo.gif";
+import bezierCurve from "../../assets/projects/bezier-demo.gif";
 ---
 
 <SiteLayout title="Projects — Aly Ashour" active="projects" theme="editorial" pageClass="fresco-projects">
   <main>
-      <CollectionHero 
-        image="/design-system/canopy-editorial-v2.png" 
-        overlay="/design-system/canopy-shade.svg" 
+      <CollectionHero
+        image={assetCanopyEditorialV2.src}
+        overlay={assetCanopyShade.src}
         imageWidth={1536} imageHeight={1024} eyebrow="Aly Ashour's"
         title="PROJECTS" description='"Plans are worthless but planning is everything." - Dwight D. Eisenhower.'
       />
@@ -47,8 +49,6 @@ import bezierCurve from "../../assets/images/bezier-demo.gif";
         tags={["Python", "Machine Learning"]}
         description="A data-driven look at transit network design — modeling routes and stops for a city transport system and visualizing the result in 3D."
         githubUrl="https://github.com/alyashour/Dyn-Transport-Route-Design-System"
-        filterTags="Python,Machine Learning"
-        priority
       />
       <ProjectCard
         href="/projects/gerstner-waves/"
@@ -58,8 +58,6 @@ import bezierCurve from "../../assets/images/bezier-demo.gif";
         tags={["C++", "OpenGL"]}
         description="A real-time ocean surface shader using the Gerstner wave model to animate a physically plausible water surface."
         githubUrl="https://github.com/alyashour/Gerstner-waves"
-        filterTags="C++,OpenGL"
-        priority
       />
       <ProjectCard
         href="/projects/marching-cubes/"
@@ -69,8 +67,6 @@ import bezierCurve from "../../assets/images/bezier-demo.gif";
         tags={["Python", "OpenGL"]}
         description="An implementation of marching cubes, extracting a polygonal surface from a 3D scalar field and rendering it in OpenGL."
         githubUrl="https://github.com/alyashour/Marching-Cube-Renderer"
-        filterTags="Python,OpenGL"
-        priority
       />
       <ProjectCard
         href="/projects/bezier-curve/"
@@ -80,8 +76,6 @@ import bezierCurve from "../../assets/images/bezier-demo.gif";
         tags={["Python", "OpenGL"]}
         description="An interactive editor for constructing and manipulating Bezier curves by hand."
         githubUrl="https://github.com/alyashour/Bezier-Curve-Editor"
-        priority
-        filterTags="Python,OpenGL"
       />
     </div>
     </div>

@@ -1,21 +1,9 @@
-# Portfolio mood boards
+# Portfolio studies
 
-Created with the built-in image-generation tool from the supplied sculpture photograph. Project text is illustrative.
+These local HTML studies use the active artwork in `src/assets/` and are not deployed:
 
-01 — Stone Gallery: warm minimalist gallery, elegant serif type and spacious image-led layout.
-Reference: https://onepagelove.com/designwork
+- [Perception Atelier](perception-atelier.html): sculpture composition and artistic vision annotations.
+- [Historical waypoint](perception-atelier-waypoint-01.html): an earlier sculpture overlay composition.
+- [Canopy shade composite](canopy-shade-composite.html): the active canopy artwork with its separate shade overlay.
 
-02 — Sculptural Editorial: bold editorial portfolio, oversized condensed type and dramatic crops.
-Reference: https://dribbble.com/shots/27288946-JH-Editorial-Art-Director-Portfolio-Personal-Website-UI-Design
-
-# Generation prompts
-
-Use case: ui-mockup. Create a polished landscape portfolio WEBSITE STYLE MOOD BOARD, not a finished website. Reference image is the user's attached photograph of classical marble sculpture: preserve its warm ivory stone, ochre taupe backdrop, dramatic torsion and carving. Use actual recognizable crops of that photo as main inspiration, alongside stone texture samples. Professional art-direction presentation with an exact readable title, palette swatches with hex labels, typography specimen, one large desktop homepage concept and one small mobile concept. Restrained high quality composition, no decorative office props, no invented client logos or credentials. Sample site name ALYA and navigation Work, About, Contact; no claims about occupation. Make every element readable and align carefully. Title exactly: '01 — STONE GALLERY'. Direction: warm minimalist gallery portfolio inspired by image-led minimal portfolios such as Designwork, original design not a copy. Airy ivory #F1E9DB, limestone #D5C4A7, taupe #8B7355, espresso #342A22. Elegant high-contrast serif headings paired with small clean sans-serif captions. Generous whitespace, fine rules, asymmetric museum catalogue composition, big art imagery with concise numbered project captions. Include text 'Warm / Quiet / Curated'. Homepage: large refined serif 'Selected work', cropped sculpture occupying right two thirds, elegant portfolio index below. Stone and paper material samples, typography 'Aa / Form & feeling'. Board should feel serene yet contemporary. Landscape 1536x1024.
-
-Use case: ui-mockup. Create a polished landscape portfolio WEBSITE STYLE MOOD BOARD, not a finished website. Reference image is the user's attached photograph of classical marble sculpture: preserve its warm ivory stone, ochre taupe backdrop, dramatic torsion and carving. Use actual recognizable crops of that photo as main inspiration, alongside stone texture samples. Professional art-direction presentation with an exact readable title, palette swatches with hex labels, typography specimen, one large desktop homepage concept and one small mobile concept. Restrained high quality composition, no decorative office props, no invented client logos or credentials. Sample site name ALYA and navigation Work, About, Contact; no claims about occupation. Make every element readable and align carefully. Title exactly: '02 — SCULPTURAL EDITORIAL'. Direction: bold editorial portfolio, original design inspired by typography-led art director portfolios. Dramatic dense large grotesk typography, asymmetric magazine layout, cinematic oversized sculpture detail, espresso #241E19, sandstone #B39770, bone #EEE4D2, muted bronze #796440. Dark dominant homepage mockup with ivory large typography 'FORM / IN MOTION', compact numbered work index and strong photography. Include text 'Bold / Tactile / Dramatic'. Show grotesk type specimen 'Aa / FORM IN MOTION', carved marble and grain texture tiles, deliberate large negative-space panel and clear swatches. Contemporary digital editorial design, no Greek ornament, no faux antiquity, no generic cards. Landscape 1536x1024.
-
-## Fresco study — projects direction
-
-Editable board: [fresco-study/index.html](fresco-study/index.html). Uses the supplied fresco photograph unchanged, CSS detail crops, Anton/Inter typography, and an earth-tone palette with a restrained blue accent. Overlay: [fresco-study/faces.svg](fresco-study/faces.svg), manually fitted to the three prominent faces in a 768 × 1024 coordinate space. The overlay uses dark image-derived umber (`#302A25`), 2px non-scaling corner strokes, and a 1px faint perimeter for visibility, following the approved light-image contrast rule. The toggle compares the photograph with and without annotations. These are artistic annotations, not model detections.
-
-Authored directly in HTML/CSS/SVG rather than generated, to preserve the photograph and maintain an editable overlay. The projects page is deferred.
+The current design rules are in [Perception Atelier](../docs/perception-atelier-design-system.md), with live examples at `/design-system/`.

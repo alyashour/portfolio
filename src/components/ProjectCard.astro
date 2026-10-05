@@ -7,71 +7,32 @@ interface Props {
   image: ImageMetadata;
   imageAlt: string;
   title: string;
-  variant?: "compact" | "full";
-  tech?: string;
-  tags?: string[];
-  description?: string;
-  githubUrl?: string;
-  filterTags?: string;
-  priority?: boolean;
+  tags: string[];
+  description: string;
+  githubUrl: string;
 }
 
-const {
-  href,
-  image,
-  imageAlt,
-  title,
-  variant = "full",
-  tech,
-  tags = [],
-  description,
-  githubUrl,
-  filterTags,
-  priority = false,
-} = Astro.props as Props;
+const { href, image, imageAlt, title, tags, description, githubUrl } =
+  Astro.props as Props;
 ---
 
-<div class="project-card" data-card data-tags={filterTags}>
+<div data-card data-tags={tags.join(",")}>
   <a href={href} class="project-card-link">
     <Image
       src={image}
       alt={imageAlt}
       width={640}
-      loading={priority ? "eager" : "lazy"}
-      fetchpriority={priority ? "high" : "auto"}
+      loading="eager"
+      fetchpriority="high"
       class="thumb project-card-img"
     />
-    <h3
-      class:list={[
-        "project-card-title",
-        variant === "compact" && "project-card-title-compact",
-      ]}
-    >
-      {title}
-    </h3>
+    <h3 class="project-card-title">{title}</h3>
   </a>
-  {
-    variant === "compact" && tech && (
-      <div class="project-card-tech">{tech}</div>
-    )
-  }
-  {
-    variant === "full" && (
-      <>
-        <div class="badge-row">
-          {tags.map((tag) => (
-            <span class="badge">{tag}</span>
-          ))}
-        </div>
-        {description && <p class="project-card-desc">{description}</p>}
-        {githubUrl && (
-          <a href={githubUrl} class="project-card-github">
-            View on GitHub →
-          </a>
-        )}
-      </>
-    )
-  }
+  <div class="badge-row">
+    {tags.map((tag) => <span class="badge">{tag}</span>)}
+  </div>
+  <p class="project-card-desc">{description}</p>
+  <a href={githubUrl} class="project-card-github">View on GitHub →</a>
 </div>
 
 <style>
@@ -94,16 +55,6 @@ const {
     font-weight: 600;
     font-size: 21px;
     margin: 0 0 6px;
-  }
-
-  .project-card-title-compact {
-    font-size: 17px;
-    margin-bottom: 4px;
-  }
-
-  .project-card-tech {
-    font-size: 12px;
-    color: var(--color-text-faint);
   }
 
   .project-card-desc {

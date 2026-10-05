@@ -1,7 +1,14 @@
 ---
+import assetSculpture from '../assets/editorial/sculpture.jpeg';
+import assetEditorialPhotoV2 from '../assets/editorial/editorial-photo-v2.png';
+import assetFrescoSource from '../assets/editorial/fresco-source.jpeg';
+import assetCanopyEditorialV2 from '../assets/editorial/canopy-editorial-v2.png';
+import assetPerceptionAtelierOverlay from '../assets/overlays/perception-atelier-overlay.svg';
+import assetFrescoOverlay from '../assets/overlays/fresco-overlay.svg';
+import assetCanopyShade from '../assets/overlays/canopy-shade.svg';
 import '../styles/stone-gallery.css';
 import { Image } from 'astro:assets';
-import marchingCubes from '../assets/images/marching-cube-demo.gif';
+import marchingCubes from '../assets/projects/marching-cube-demo.gif';
 const colors = [
   ['Ivory', '#F1E9DB', 'Canvas'], ['Limestone', '#D5C4A7', 'Soft surfaces'],
   ['Taupe', '#8B7355', 'Decorative accent'], ['Espresso', '#342A22', 'Primary ink'],
@@ -36,7 +43,7 @@ const colors = [
             <a class="sg-text-link" href="#components">Explore the system <span aria-hidden="true">↓</span></a>
           </div>
           <figure class="source">
-            <img src="/design-system/sculpture.jpeg" alt="Warm ivory classical marble sculpture against a taupe wall, the visual reference for Stone Gallery." width="1024" height="768" />
+            <img src={assetSculpture.src} alt="Warm ivory classical marble sculpture against a taupe wall, the visual reference for Stone Gallery." width="1024" height="768" />
             <figcaption><span class="sg-code">01 / VISUAL FOUNDATION</span><span>Stone, light &amp; form</span></figcaption>
           </figure>
         </section>
@@ -72,7 +79,7 @@ const colors = [
           <h2 class="sg-heading">The image sets the page’s tone.</h2>
           <p class="sg-muted prose">Each new page draws its canvas, ink, surfaces, accents, and overlay colors from its primary image. Typography and annotation geometry remain consistent across the portfolio. The current live direction uses Anton headlines and Inter body text; Stone Gallery above is the original foundation.</p>
           <figure>
-            <div class="perception-specimen"><img src="/design-system/editorial-photo-v2.png" alt="Warm classical sculpture with three artistic face detection boxes." width="1536" height="1024" /><img src="/design-system/perception-atelier-overlay.svg" alt="" aria-hidden="true" width="1536" height="1024" /></div>
+            <div class="perception-specimen"><img src={assetEditorialPhotoV2.src} alt="Warm classical sculpture with three artistic face detection boxes." width="1536" height="1024" /><img src={assetPerceptionAtelierOverlay.src} alt="" aria-hidden="true" width="1536" height="1024" /></div>
             <figcaption><span class="sg-code">PERCEPTION ATELIER / CURRENT OVERLAY</span><span>Bone linework · Face boxes · No text on image</span></figcaption>
           </figure>
           <div class="sg-grid perception-guidance">
@@ -81,11 +88,11 @@ const colors = [
           </div>
           <p class="sg-muted prose">Author annotations in the source image’s coordinate space. Image and SVG must share aspect ratio, fit, crop, and position at every breakpoint. New images need their own manually fitted boxes; never reuse sculpture coordinates. Keep annotations decorative and leave essential information in page text.</p>
           <figure class="fresco-contrast-study">
-            <div class="fresco-specimen"><img src="/design-system/fresco-source.jpeg" alt="Weathered fresco with three prominent figures, annotated with dark umber face boxes." width="768" height="1024" /><img src="/design-system/fresco-overlay.svg" alt="" aria-hidden="true" width="768" height="1024" /></div>
+            <div class="fresco-specimen"><img src={assetFrescoSource.src} alt="Weathered fresco with three prominent figures, annotated with dark umber face boxes." width="768" height="1024" /><img src={assetFrescoOverlay.src} alt="" aria-hidden="true" width="768" height="1024" /></div>
             <figcaption><span class="sg-code">FRESCO / LIGHT-IMAGE CONTRAST</span><span>Umber #302A25 · 2px corners · 1px faint perimeter</span></figcaption>
           </figure>
           <figure>
-            <div class="perception-specimen"><img src="/design-system/canopy-editorial-v2.png" alt="Generated landscape reinterpretation of a mossy rock gorge with artistic surface planes." width="1536" height="1024" /><img src="/design-system/canopy-shade.svg" alt="" aria-hidden="true" width="1536" height="1024" /></div>
+            <div class="perception-specimen"><img src={assetCanopyEditorialV2.src} alt="Generated landscape reinterpretation of a mossy rock gorge with artistic surface planes." width="1536" height="1024" /><img src={assetCanopyShade.src} alt="" aria-hidden="true" width="1536" height="1024" /></div>
             <figcaption><span class="sg-code">CANOPY / ARTISTIC SURFACE PLANES</span><span>User-authored shade overlay · Translucent geometry</span></figcaption>
           </figure>
           <a class="sg-text-link" href="/">See the live application ↗</a>

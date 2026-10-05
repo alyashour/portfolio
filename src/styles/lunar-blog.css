@@ -1,9 +1,9 @@
 body.sculptural-editorial.lunar-blog {
  --color-bg:#07131f; --color-text:#f0dfc2; --color-text-secondary:#c0c8d3;
- --color-text-muted:#c0c8d3; --color-text-faint:#c0c8d3;
+ --color-text-muted:#c0c8d3;
  --color-accent:#a7c7a2; --color-accent-hover:#f0dfc2;
  --color-border:#465366; --color-border-strong:#7da77b;
- --color-panel-bg:#101f30; --color-slate:#91a4c0; background:var(--color-bg);
+  --color-slate:#91a4c0; background:var(--color-bg);
 }
 body.sculptural-editorial.lunar-blog .page { background:var(--color-bg); color:var(--color-text); }
 body.lunar-blog :focus-visible { outline-color:var(--color-accent); }
@@ -14,7 +14,6 @@ body.lunar-blog .nav-link[aria-current="page"] { text-decoration:underline; text
 .lunar-cover::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,rgba(7,19,31,.35),transparent 65%),linear-gradient(0deg,#07131f,transparent 35%),linear-gradient(180deg,rgba(7,19,31,.65),transparent 20%); }
 .lunar-copy { width:100%; padding:140px clamp(1.5rem,5vw,5rem) 90px; }
 .lunar-copy h1 { font:400 clamp(4rem,10vw,10rem)/1 Anton,Impact,sans-serif; letter-spacing:-.02em; margin:0 0 24px; }
-.lunar-lede { font-size:clamp(16px,2vw,23px); line-height:1.6; letter-spacing:.035em; margin:0; max-width:40ch; }
 body.sculptural-editorial.lunar-blog .collection-surface { --color-text:#f0dfc2; --color-text-secondary:#c0c8d3; --color-accent:#a7c7a2; --color-accent-hover:#f0dfc2; --color-border:#465366; background:var(--color-bg); border-top:1px solid var(--color-border); }
 body.lunar-blog .stone-detail { object-fit:cover; }
 @media(max-width:650px) {

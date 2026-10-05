@@ -1,6 +1,6 @@
 # Perception Atelier — current portfolio direction
 
-This extends the original Stone Gallery foundation. The live site uses sculptural editorial composition, Anton headlines, Inter prose, and image-derived page palettes. The historical waypoint reference is `moodboards/perception-atelier-waypoint-01.html`; the live overlay is `public/design-system/perception-atelier-overlay.svg`.
+This extends the original Stone Gallery foundation. The live site uses sculptural editorial composition, Anton headlines, Inter prose, and image-derived page palettes. The historical waypoint reference is `moodboards/perception-atelier-waypoint-01.html`; the live overlay is `src/assets/overlays/perception-atelier-overlay.svg`.
 
 ## Required for future images
 
@@ -25,18 +25,6 @@ Scope palette overrides to a page container or body rather than global root toke
 
 Check text contrast (4.5:1 normal text, 3:1 large text), keyboard focus, overlay visibility, and mobile crop. Do not add motion unless it improves the composition; respect reduced motion. The visual specimen is at `/design-system/#perception`.
 
-## Process record
-
-See [Sculpture image process](sculpture-image-process.md) for the source, generation prompt, overlay iterations, exact final box coordinates, and responsive compositing settings.
-
 ## Canopy plane study
 
-The canopy projects hero uses editable irregular surface patches fitted to visible bare-rock facets, with sparse supporting points; the current canopy study has four panels and no ray overlay. Use image-derived light-neutral linework, faint olive fills, and no labels, invented normals, distances, or confidence scores. These are manually authored artistic surface studies, not measured plane estimation. This exception applies to the canopy image; the sculpture keeps its three face boxes.
-
-The canopy study may also use a sparse illustrative light-ray fan from a source occluded behind the left overhang through the gorge, as requested by the user. Keep the rays faint, with short dashed occluded segments and restrained endpoint markers; no labels, calculated angles, or measured reconstruction claims. This does not change the sculpture overlay.
-
-The canopy image may use an alternate occlusion-contour and sparse landmark study, requested by the user. Trace the visible foreground silhouette and place restrained feature rings on bare-rock corners. No feature IDs, measured depth, or tracking claims.
-
-The current canopy image uses the user-supplied `canopy-shade.svg` in place of the prior panels, contours, landmarks and rays. Preserve its translucent geometry and dashed boundary as supplied. It shares the artwork's 3:2 aspect ratio and remains a separate decorative overlay below readability fades. Earlier canopy studies are inactive references.
-
-The integrated canopy raster was rejected for softness. The projects hero uses the sharp `canopy-editorial-v2.png` with the refined separate `canopy-shade.svg`. Keep the integrated raster as an inactive study.
+The projects hero uses `src/assets/editorial/canopy-editorial-v2.png` with the separate user-supplied `src/assets/overlays/canopy-shade.svg`. Preserve its translucent geometry and dashed boundary as supplied. The overlay shares the artwork's 3:2 aspect ratio and remains decorative, below readability fades. These are manually authored artistic surface studies, not measured plane estimation. This exception applies to the canopy image; the sculpture keeps its three face boxes.

@@ -5,7 +5,7 @@
   --color-text: #201f1d;
   --color-text-secondary: rgba(32, 31, 29, 0.8);
   --color-text-muted: rgba(32, 31, 29, 0.58);
-  --color-text-faint: rgba(32, 31, 29, 0.5);
+
   --color-border: rgba(32, 31, 29, 0.14);
   --color-border-strong: rgba(32, 31, 29, 0.16);
 
@@ -14,12 +14,12 @@
 
   --color-badge-bg: #fff3e4;
   --color-badge-text: #7d5411;
-  --color-panel-bg: rgba(243, 242, 242, 0.6);
+
   --color-thumb-border: #eae9e9;
 
   --font-serif: 'Cormorant Garamond', serif;
   --font-body: Lora, serif;
-  --font-mono: 'SF Mono', Menlo, Consolas, monospace;
+
 }
 
 * {
@@ -45,44 +45,12 @@ a:hover {
 }
 
 /* layout primitives */
-.section {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 0 32px;
-}
-
-.section-narrow {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 0 32px;
-}
-
-.divider {
-  height: 1px;
-  background: var(--color-border);
-}
-
-.eyebrow {
-  font-family: var(--font-body);
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-accent);
-  margin: 0 0 14px;
-}
 
 .page-title {
   font-family: var(--font-serif);
   font-weight: 600;
   font-size: 44px;
   margin: 0 0 14px;
-}
-
-.lede {
-  font-size: 16px;
-  color: var(--color-text-secondary);
-  max-width: 520px;
-  margin: 0;
 }
 
 /* buttons */
@@ -99,11 +67,6 @@ a:hover {
 .btn-outline {
   color: var(--color-accent);
   border: 1px solid var(--color-accent);
-}
-
-.btn-secondary {
-  color: var(--color-text);
-  border: 1px solid var(--color-border-strong);
 }
 
 /* badges */

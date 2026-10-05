@@ -1,10 +1,10 @@
 ---
-interface Props { eyebrow: string; title: string; description: string; image?: string; overlay?: string | null; imageWidth?: number; imageHeight?: number; }
-const { eyebrow, title, description, image = "/design-system/editorial-photo-v2.png", overlay = "/design-system/perception-atelier-overlay.svg", imageWidth = 1536, imageHeight = 1024 } = Astro.props;
+interface Props { eyebrow: string; title: string; description: string; image: string; overlay: string; imageWidth: number; imageHeight: number; }
+const { eyebrow, title, description, image, overlay, imageWidth, imageHeight } = Astro.props as Props;
 ---
 <section class="collection-cover">
   <img src={image} alt="" aria-hidden="true" width={imageWidth} height={imageHeight} />
-  {overlay && <img src={overlay} alt="" aria-hidden="true" width={imageWidth} height={imageHeight} />}
+  <img src={overlay} alt="" aria-hidden="true" width={imageWidth} height={imageHeight} />
   <div class="collection-cover-copy">
     <p>{eyebrow}</p>
     <h1>{title}</h1>
