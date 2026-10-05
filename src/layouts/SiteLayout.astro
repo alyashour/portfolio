@@ -27,7 +27,7 @@ const { title, active, theme } = Astro.props as Props;
     <div class="page">
       <SiteHeader active={active} minimal={theme === 'editorial'} />
       <slot />
-      {theme !== 'editorial' && <SiteFooter />}
+      <SiteFooter />
     </div>
   </body>
 </html>

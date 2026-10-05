@@ -2,6 +2,8 @@
 
 Personal portfolio for Aly Ashour · alyashour.com
 
+Historical foundation. The current live direction and future-image requirements are documented in [Perception Atelier](perception-atelier-design-system.md), which takes precedence for image-derived page palettes and vision annotations.
+
 ## Design intent
 
 Warm, quiet, curated. A museum catalogue for engineering work: expressive serif headlines, precise sans-serif text, large project visuals and restrained numbered captions. Classical art and personal photography add character; transformer software, PCBs and LiDAR explain the work. The sculpture is a source of tone and composition, not the default image for every project.

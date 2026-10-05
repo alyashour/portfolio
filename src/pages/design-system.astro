@@ -24,7 +24,7 @@ const colors = [
     <div class="sg-shell">
       <header class="sg-nav">
         <a class="sg-brand" href="/">Aly Ashour</a>
-        <nav aria-label="Design system"><a href="#palette">Palette</a><a href="#type">Typography</a><a href="#components">Components</a><a href="#principles">Principles</a></nav>
+        <nav aria-label="Design system"><a href="#palette">Palette</a><a href="#type">Typography</a><a href="#components">Components</a><a href="#perception">Augmented imagery</a><a href="#principles">Principles</a></nav>
       </header>
       <main id="main">
         <section class="intro">
@@ -67,6 +67,21 @@ const colors = [
           </div>
           <div class="index-study"><h3 class="sg-subheading">Project index</h3><a class="index-row" href="/projects/dynamic-transport/"><span class="sg-code">02</span><span>Dynamic Transport Network Design System</span><span class="sg-muted index-meta">Python · Machine Learning</span><span aria-hidden="true">↗</span></a><a class="index-row" href="/projects/gerstner-waves/"><span class="sg-code">03</span><span>Gerstner Waves Water Shader</span><span class="sg-muted index-meta">C++ · OpenGL</span><span aria-hidden="true">↗</span></a></div>
         </section>
+        <section class="sg-section" id="perception">
+          <p class="sg-label">Current extension / Perception Atelier</p>
+          <h2 class="sg-heading">The image sets the page’s tone.</h2>
+          <p class="sg-muted prose">Each new page draws its canvas, ink, surfaces, accents, and overlay colors from its primary image. Typography and annotation geometry remain consistent across the portfolio. The current live direction uses Anton headlines and Inter body text; Stone Gallery above is the original foundation.</p>
+          <figure>
+            <div class="perception-specimen"><img src="/design-system/editorial-photo-v2.png" alt="Warm classical sculpture with artistic face detection boxes, landmarks, and a torso volume." width="1536" height="1024" /><img src="/design-system/perception-atelier-overlay.svg" alt="" aria-hidden="true" width="1536" height="1024" /></div>
+            <figcaption><span class="sg-code">PERCEPTION ATELIER / APPROVED WAYPOINT</span><span>Bone linework · Bronze geometry · No text on image</span></figcaption>
+          </figure>
+          <div class="sg-grid perception-guidance">
+            <div><h3 class="sg-subheading">Palette per page</h3><p class="sg-muted prose">Choose a dark anchor, light neutral, middle tone, and restrained accent from the image. Derive readable text and focus colors from these; use the palette for that page’s navigation, sections, footer, and annotations. Preserve meaningful colors in technical figures.</p><p class="sg-code">Sculpture: #241E19 / #EEE4D2 / #B39770 / #796440</p></div>
+            <div><h3 class="sg-subheading">A consistent visual grammar</h3><p class="sg-muted prose">Thin open-corner bounding boxes fit identifiable subjects. Fine translucent outlines, sparse landmark dots, and restrained perspective volumes remain secondary to the image. No decorative labels, leader lines, sightlines, angle estimates, or snake spline. These are artistic annotations, not measured model outputs.</p></div>
+          </div>
+          <p class="sg-muted prose">Author annotations in the source image’s coordinate space. Image and SVG must share aspect ratio, fit, crop, and position at every breakpoint. New images need their own manually fitted boxes; never reuse sculpture coordinates. Keep annotations decorative and leave essential information in page text.</p>
+          <a class="sg-text-link" href="/">See the live application ↗</a>
+        </section>
         <section class="sg-section" id="principles">
           <p class="sg-label">04 / Composition &amp; behavior</p><h2 class="sg-heading">Space is part of the system.</h2>
           <div class="sg-grid"><div><h3 class="sg-subheading">Editorial rhythm</h3><p class="sg-muted prose">A 4px spacing unit, generous section breaks, fine rules, and asymmetric imagery. Two columns become one on smaller screens. Reading text stays within 65 characters per line.</p><div class="spacing" aria-label="Spacing scale in pixels">{[4,8,12,16,24,32,48,64,96].map(n=><div><span style={`height:${n}px`}></span><small class="sg-code">{n}</small></div>)}</div></div><div><h3 class="sg-subheading">Engineering, presented honestly</h3><p class="sg-muted prose">Transformer architecture, PCB photography, and LiDAR point clouds belong in project stories. Use real artifacts, readable legends, and precise captions. Art and nature provide atmosphere.</p><h3 class="sg-subheading">Quiet interactions</h3><p class="sg-muted prose">180ms transitions. Visible keyboard focus. At least 44px control height. Reduced motion respected. No essential information conveyed by color alone.</p></div></div>
@@ -77,6 +92,9 @@ const colors = [
   </body>
 </html>
 <style>
+  .perception-specimen { position:relative; aspect-ratio:3/2; margin-top:2rem; background:#241e19; }
+  .perception-specimen img { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; }
+  .perception-guidance { margin-top:2.5rem; }
   .intro { display: grid; grid-template-columns: .9fr 1.1fr; gap: 4rem; align-items: center; padding-block: 5rem; }
   .intro-lede { font-family: var(--sg-font-display); font-size: 1.75rem; }
   .prose { max-width: 65ch; }

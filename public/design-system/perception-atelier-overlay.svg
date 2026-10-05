@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1536" height="1024" viewBox="0 0 1536 1024" fill="none" stroke="#eee4d2" stroke-width="1.2">
+<style>.bronze{stroke:#b39770}.fine{stroke-width:.65;opacity:.55}.point{fill:#eee4d2;stroke:none}</style>
+<!-- Detection boxes: open corners keep the marble visible. -->
+<path class="fine" d="M725 61H987V299H725Z M1385 517H1531V688H1385Z"/>
+<path d="M725 89V61H753 M959 61H987V89 M987 271V299H959 M753 299H725V271 M1385 545V517H1413 M1503 517H1531V545 M1531 660V688H1503 M1413 688H1385V660"/>
+
+<!-- Left face detection, matching the other open-corner boxes. -->
+<path class="fine" d="M476 438H628V583H476Z"/>
+<path d="M476 462V438H500 M604 438H628V462 M628 559V583H604 M500 583H476V559"/>
+<!-- Oriented spatial volume follows the carved torso rather than the screen. -->
+<g class="bronze"><path d="M640 336L936 283L1035 626L690 693Z M681 310L977 257L1076 600L731 667Z" opacity=".55"/><path d="M640 336L681 310 M936 283L977 257 M1035 626L1076 600 M690 693L731 667"/><path class="fine" stroke-dasharray="4 8" d="M640 336L1035 626 M936 283L690 693"/></g>
+<!-- A restrained constellation of tracked edges. -->
+<path class="fine" d="M804 167L859 199L915 165 M859 199L847 245 M1031 681L1080 706L1125 672"/>
+<g class="point"><circle cx="804" cy="167" r="2.5"/><circle cx="859" cy="199" r="2.5"/><circle cx="915" cy="165" r="2.5"/><circle cx="847" cy="245" r="2.5"/><circle cx="1031" cy="681" r="2.5"/><circle cx="1080" cy="706" r="2.5"/><circle cx="1125" cy="672" r="2.5"/></g>
+
+
+
+
+
+</svg>
