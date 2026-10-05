@@ -1,0 +1,32 @@
+<section id="about" class="editorial-hero" aria-labelledby="editorial-title">
+  <img class="editorial-art" src="/design-system/editorial-photo-v2.png" alt="Photo-inspired illustration of the classical sculpture group in warm stone and espresso tones." width="1536" height="1024" fetchpriority="high" />
+  <div class="editorial-fade" aria-hidden="true"></div>
+  <div class="editorial-content">
+    <p class="eyeline">Robotics engineering</p>
+    <h1 id="editorial-title">ALY<br />ASHOUR</h1>
+    <p class="synopsis">I explore the space between software and the physical world—through intelligent systems, electronics, and sensing.</p>
+    <p class="synopsis secondary">Outside engineering, I’m drawn to space, physics, and ancient history.</p>
+    <a class="editorial-cta" href="#projects">Explore selected work <span aria-hidden="true">↗</span></a>
+  </div>
+</section>
+<style>
+  .editorial-hero { min-height:760px; height:clamp(760px,66.67vw,980px); position:relative; overflow:hidden; isolation:isolate; background:#160f09; color:#eee4d2; }
+  .editorial-art { position:absolute; inset:0; width:100%; height:100%; object-fit:contain; object-position:right top; z-index:-2; }
+  .editorial-fade { position:absolute; inset:0; z-index:-1; background:linear-gradient(0deg,#160f09 0%,transparent 22%); }
+  .editorial-content { padding:8rem clamp(1.5rem,5vw,5rem) 4rem; position:relative; max-width:55%; }
+  .synopsis { max-width:34ch; font-size:1rem; line-height:1.75; margin:2rem 0 0; color:#eee4d2; }
+  .synopsis.secondary { font-size:.875rem; color:#d5c4a7; margin-top:1rem; }
+  .eyeline { font-size:.65rem; text-transform:uppercase; letter-spacing:.2em; margin:0 0 2.5rem; color:#d5c4a7; }
+  h1 { font-family:'Anton','Impact','Arial Narrow',sans-serif; font-size:clamp(4rem,9.8vw,10rem); font-weight:400; letter-spacing:-.025em; line-height:.99; margin:0; }
+  .editorial-cta { min-height:44px; display:inline-flex; align-items:center; gap:3rem; font-size:.75rem; text-decoration:none; border-bottom:1px solid #b39770; margin-top:2rem; }
+  .editorial-cta:hover { color:#d5c4a7; }
+  @media (max-width:767px) {
+    .editorial-hero { min-height:780px; height:auto; }
+    .editorial-art { object-fit:cover; object-position:62% center; }
+    .editorial-fade { background:linear-gradient(90deg,rgba(31,25,19,.85),rgba(31,25,19,.55) 58%,rgba(31,25,19,.12)),linear-gradient(0deg,#1f1913 0%,rgba(31,25,19,.65) 20%,transparent 60%); }
+    .editorial-content { max-width:none; padding:8rem 1.5rem 4rem; }
+    .eyeline { margin-bottom:1.5rem; }
+    h1 { font-size:clamp(3.25rem,17vw,6rem); }
+    .synopsis { max-width:29ch; }
+  }
+</style>

@@ -1,14 +1,17 @@
 ---
 import "../styles/global.css";
+import "../styles/stone-gallery.css";
+import "../styles/sculptural-editorial.css";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 
 interface Props {
   title: string;
-  active?: "about" | "experience" | "projects" | "writing" | "contact";
+  theme?: 'stone' | 'editorial';
+  active?: "about" | "experience" | "projects" | "blog" | "contact";
 }
 
-const { title, active } = Astro.props as Props;
+const { title, active, theme } = Astro.props as Props;
 ---
 
 <html lang="en">
@@ -17,12 +20,14 @@ const { title, active } = Astro.props as Props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <link rel="icon" href="/favicon.ico" />
+    {theme === 'stone' && <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />}
+    {theme === 'editorial' && <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />}
   </head>
-  <body>
+  <body class={theme === 'stone' ? 'stone-gallery portfolio-stone' : theme === 'editorial' ? 'sculptural-editorial' : undefined}>
     <div class="page">
-      <SiteHeader active={active} />
+      <SiteHeader active={active} minimal={theme === 'editorial'} />
       <slot />
-      <SiteFooter />
+      {theme !== 'editorial' && <SiteFooter />}
     </div>
   </body>
 </html>

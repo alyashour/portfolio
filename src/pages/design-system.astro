@@ -1,0 +1,119 @@
+---
+import '../styles/stone-gallery.css';
+import { Image } from 'astro:assets';
+import marchingCubes from '../assets/images/marching-cube-demo.gif';
+const colors = [
+  ['Ivory', '#F1E9DB', 'Canvas'], ['Limestone', '#D5C4A7', 'Soft surfaces'],
+  ['Taupe', '#8B7355', 'Decorative accent'], ['Espresso', '#342A22', 'Primary ink'],
+  ['Paper', '#FAF6EF', 'Secondary surface'], ['Muted ink', '#6C5946', 'Secondary text'],
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stone Gallery — Aly Ashour Design System</title>
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Inter:wght@400;500;600&family=Playfair+Display:wght@400&display=swap" rel="stylesheet" />
+  </head>
+  <body class="stone-gallery">
+    <a class="sg-skip" href="#main">Skip to content</a>
+    <div class="sg-shell">
+      <header class="sg-nav">
+        <a class="sg-brand" href="/">Aly Ashour</a>
+        <nav aria-label="Design system"><a href="#palette">Palette</a><a href="#type">Typography</a><a href="#components">Components</a><a href="#principles">Principles</a></nav>
+      </header>
+      <main id="main">
+        <section class="intro">
+          <div>
+            <p class="sg-label">alyashour.com · Design system · v1.0</p>
+            <h1 class="sg-display">Stone<br />Gallery</h1>
+            <p class="intro-lede">Warm. Quiet. Curated.</p>
+            <p class="sg-muted prose">An editorial foundation for a personal engineering portfolio. Classical warmth, precise typography, and space for the work to speak.</p>
+            <a class="sg-text-link" href="#components">Explore the system <span aria-hidden="true">↓</span></a>
+          </div>
+          <figure class="source">
+            <img src="/design-system/sculpture.jpeg" alt="Warm ivory classical marble sculpture against a taupe wall, the visual reference for Stone Gallery." width="1024" height="768" />
+            <figcaption><span class="sg-code">01 / VISUAL FOUNDATION</span><span>Stone, light &amp; form</span></figcaption>
+          </figure>
+        </section>
+        <section class="sg-section" id="palette">
+          <p class="sg-label">01 / Color</p><h2 class="sg-heading">A palette drawn from stone.</h2>
+          <div class="swatches">{colors.map(([name, hex, role]) => <div><div class="swatch" style={`background:${hex}`} aria-hidden="true"></div><h3>{name}</h3><p class="sg-code">{hex}</p><p class="sg-muted">{role}</p></div>)}</div>
+          <p class="note sg-muted">Espresso and muted ink carry readable text. Taupe is reserved for decoration or large type; limestone creates quiet surface contrast.</p>
+        </section>
+        <section class="sg-section" id="type">
+          <p class="sg-label">02 / Typography</p>
+          <div class="sg-grid"><div><h2 class="sg-heading">Form &amp; feeling.</h2><p class="type-display">Aa</p><p>Playfair Display · Regular</p><p class="sg-muted">Names, headlines, and project titles. Expressive, with room to breathe.</p></div><div><h3 class="sans-title">Clarity in every detail.</h3><p>Inter · Regular, Medium, Semibold</p><p class="sg-muted prose">Body copy and navigation stay calm and direct. Technical work needs clear explanations, readable captions, and an honest account of the process.</p><div class="type-code"><p class="sg-code">IBM Plex Mono · Annotations &amp; code</p><code>tokens → attention → output<br />x: 1.24 m · y: 0.86 m · z: 2.10 m</code></div><p class="sg-label">12px labels / 16px body / 24px titles</p></div></div>
+        </section>
+        <section class="sg-section" id="components">
+          <p class="sg-label">03 / Components</p><h2 class="sg-heading">The portfolio, in pieces.</h2>
+          <div class="sg-grid">
+            <div>
+              <h3 class="sg-subheading">Project preview</h3>
+              <a class="project" href="/projects/marching-cubes/">
+                <Image src={marchingCubes} alt="Animated surface extraction demonstration from the existing Marching Cubes project." width={600} />
+                <div class="project-caption"><span class="sg-code">01</span><h4>Marching Cubes Surface Extraction</h4><span aria-hidden="true">↗</span></div>
+                <p class="sg-muted">Python · OpenGL</p>
+              </a>
+              <p class="sg-muted note">Existing project artifact. Preserve its original colors; frame it with space and a caption.</p>
+            </div>
+            <div><h3 class="sg-subheading">Actions &amp; states</h3><div class="sg-actions"><a class="sg-button" href="/projects/">View projects <span aria-hidden="true">↗</span></a><a class="sg-button sg-button-secondary" href="/#about">About Aly</a><button class="sg-button" disabled>Unavailable</button></div><p class="sg-muted note">Hover to see surface changes. Tab through the page to review focus outlines.</p>
+              <div class="form-study"><h3 class="sg-subheading">Field specimen</h3><label for="demo-email">Email</label><input class="sg-input" id="demo-email" type="email" placeholder="you@example.com" aria-describedby="email-help" /><p class="sg-muted note" id="email-help">Style demonstration only; nothing is submitted.</p><label for="demo-invalid">Email · error state</label><input class="sg-input" id="demo-invalid" type="email" value="example" aria-invalid="true" aria-describedby="email-error" /><p class="sg-error note" id="email-error">Enter an email address, such as you@example.com.</p></div>
+            </div>
+          </div>
+          <div class="index-study"><h3 class="sg-subheading">Project index</h3><a class="index-row" href="/projects/dynamic-transport/"><span class="sg-code">02</span><span>Dynamic Transport Network Design System</span><span class="sg-muted index-meta">Python · Machine Learning</span><span aria-hidden="true">↗</span></a><a class="index-row" href="/projects/gerstner-waves/"><span class="sg-code">03</span><span>Gerstner Waves Water Shader</span><span class="sg-muted index-meta">C++ · OpenGL</span><span aria-hidden="true">↗</span></a></div>
+        </section>
+        <section class="sg-section" id="principles">
+          <p class="sg-label">04 / Composition &amp; behavior</p><h2 class="sg-heading">Space is part of the system.</h2>
+          <div class="sg-grid"><div><h3 class="sg-subheading">Editorial rhythm</h3><p class="sg-muted prose">A 4px spacing unit, generous section breaks, fine rules, and asymmetric imagery. Two columns become one on smaller screens. Reading text stays within 65 characters per line.</p><div class="spacing" aria-label="Spacing scale in pixels">{[4,8,12,16,24,32,48,64,96].map(n=><div><span style={`height:${n}px`}></span><small class="sg-code">{n}</small></div>)}</div></div><div><h3 class="sg-subheading">Engineering, presented honestly</h3><p class="sg-muted prose">Transformer architecture, PCB photography, and LiDAR point clouds belong in project stories. Use real artifacts, readable legends, and precise captions. Art and nature provide atmosphere.</p><h3 class="sg-subheading">Quiet interactions</h3><p class="sg-muted prose">180ms transitions. Visible keyboard focus. At least 44px control height. Reduced motion respected. No essential information conveyed by color alone.</p></div></div>
+        </section>
+      </main>
+      <footer class="sg-section footer"><span class="sg-brand">Aly Ashour</span><p class="sg-code">STONE GALLERY / SYSTEM 1.0</p><a href="/">Return to portfolio ↗</a></footer>
+    </div>
+  </body>
+</html>
+<style>
+  .intro { display: grid; grid-template-columns: .9fr 1.1fr; gap: 4rem; align-items: center; padding-block: 5rem; }
+  .intro-lede { font-family: var(--sg-font-display); font-size: 1.75rem; }
+  .prose { max-width: 65ch; }
+  figure { margin: 0; }
+  .source img { width: 100%; height: 490px; object-fit: cover; object-position: 35% center; display: block; }
+  figcaption { display: flex; flex-wrap: wrap; gap: .5rem 1rem; justify-content: space-between; padding-top: 1rem; font-size: .8125rem; }
+  .swatches { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1.25rem; }
+  .swatch { height: 110px; border: 1px solid var(--sg-rule); }
+  .swatches h3 { font-size: 1rem; margin: 1rem 0 .25rem; font-weight: 500; }
+  .swatches p { margin: .25rem 0; font-size: .8125rem; }
+  .note { font-size: .8125rem; margin-block: 1.5rem; }
+  .type-display { font: 400 8rem/1 var(--sg-font-display); margin: 1rem 0; }
+  .sans-title { font-size: 2rem; line-height: 1.2; font-weight: 500; }
+  .type-code { border-block: 1px solid var(--sg-rule); padding: 1rem 0; margin: 2rem 0; }
+  code { font-family: var(--sg-font-code); font-size: .8125rem; overflow-wrap: anywhere; }
+  .project { display: block; text-decoration: none; }
+  .project img { width: 100%; height: auto; aspect-ratio: 3/2; object-fit: contain; background: var(--sg-paper); display: block; }
+  .project-caption { display: grid; grid-template-columns: auto 1fr auto; gap: 1.25rem; align-items: baseline; padding-top: 1.25rem; border-top: 1px solid var(--sg-rule); margin-top: 1rem; }
+  .project-caption h4 { font: 400 1.5rem/1.25 var(--sg-font-display); margin: 0; }
+  .project:hover h4 { text-decoration: underline; text-underline-offset: .2em; }
+  .form-study { margin-top: 2.5rem; }
+  label { display: block; margin-bottom: .5rem; font-size: .875rem; }
+  .index-study { margin-top: 4rem; }
+  .index-row { display: grid; grid-template-columns: 2rem 1fr auto 1rem; align-items: baseline; gap: 1.5rem; padding: 1.5rem 0; border-top: 1px solid var(--sg-rule); text-decoration: none; }
+  .index-row > span:nth-child(2) { font: 400 1.5rem/1.3 var(--sg-font-display); }
+  .index-row:hover > span:nth-child(2) { text-decoration: underline; }
+  .index-meta { font-size: .8125rem; }
+  .spacing { display: flex; gap: 1rem; align-items: flex-end; flex-wrap: wrap; padding-top: 1rem; }
+  .spacing div { display: flex; flex-direction: column; align-items: center; gap: .5rem; }
+  .spacing span { display: block; width: 20px; background: var(--sg-taupe); }
+  .footer { display: flex; align-items: center; flex-wrap: wrap; gap: 1.5rem; font-size: .875rem; }
+  @media (max-width: 48rem) {
+    .intro { grid-template-columns: 1fr; gap: 2rem; padding-block: 3rem; }
+    .source img { height: 340px; }
+    .swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .index-row { grid-template-columns: 1.5rem 1fr 1rem; gap: 1rem; }
+    .index-meta { grid-column: 2; grid-row: 2; }
+    .index-row > span:last-child { grid-column: 3; grid-row: 1; }
+  }
+</style>

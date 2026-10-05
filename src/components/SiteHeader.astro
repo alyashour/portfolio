@@ -1,23 +1,25 @@
 ---
 interface Props {
-  active?: "about" | "experience" | "projects" | "writing" | "contact";
+  minimal?: boolean;
+  active?: "about" | "experience" | "projects" | "blog" | "contact";
 }
 
-const { active } = Astro.props as Props;
+const { active, minimal } = Astro.props as Props;
 
 const links = [
   { key: "about", href: "/#about", label: "About" },
   { key: "experience", href: "/#experience", label: "Experience" },
   { key: "projects", href: "/projects/", label: "Projects" },
-  { key: "writing", href: "/writing/", label: "Writing" },
+  { key: "blog", href: "/blog/", label: "Blog" },
   { key: "contact", href: "/#contact", label: "Contact" },
 ];
 ---
 
 <header class="site-header">
-  <a href="/" class="logo">Aly Ashour</a>
+  {minimal && active && <a href="/" class="nav-link home-link">Home</a>}
+  {!minimal && <a href="/" class="logo">Aly Ashour</a>}
   {
-    links.map((link) => (
+    links.filter(link => !minimal || ['projects', 'blog', 'contact'].includes(link.key)).map((link) => (
       <a
         href={link.href}
         class="nav-link"
@@ -41,6 +43,8 @@ const links = [
     background: var(--color-bg);
     z-index: 10;
   }
+
+  .home-link { margin-right: auto; }
 
   .logo {
     font-family: var(--font-serif);

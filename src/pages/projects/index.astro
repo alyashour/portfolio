@@ -1,5 +1,7 @@
 ---
 import SiteLayout from "../../layouts/SiteLayout.astro";
+import CollectionHero from "../../components/CollectionHero.astro";
+import "../../styles/collections.css";
 import ProjectCard from "../../components/ProjectCard.astro";
 import dynTransport from "../../assets/images/dyn_transport.png";
 import gerstnerWaves from "../../assets/images/gernster-waves.gif";
@@ -7,17 +9,12 @@ import marchingCubes from "../../assets/images/marching-cube-demo.gif";
 import bezierCurve from "../../assets/images/bezier-demo.gif";
 ---
 
-<SiteLayout title="Projects — Aly Ashour" active="projects">
-  <div class="section intro-section">
-    <div class="eyebrow">Projects</div>
-    <h1 class="page-title">Selected work</h1>
-    <p class="lede">
-      Graphics, robotics, and systems projects. Source for each is on GitHub.
-    </p>
-  </div>
-
-  <div class="section grid-section">
-    <div class="filter-bar">
+<SiteLayout title="Projects — Aly Ashour" active="projects" theme="editorial">
+  <main>
+    <CollectionHero eyebrow="Engineering / Explorations" title="ALL PROJECTS" description="Experiments in graphics, intelligent systems, and the physical world." />
+    <section class="collection-surface" aria-label="Project collection">
+    <div class="collection-inner">
+    <div class="filter-bar" role="group" aria-label="Filter projects by technology">
       <button class="filter-btn is-active" data-filter-btn data-tag="All"
         >All</button
       >
@@ -34,6 +31,7 @@ import bezierCurve from "../../assets/images/bezier-demo.gif";
         data-tag="Machine Learning">Machine Learning</button
       >
     </div>
+    <p class="collection-count" aria-live="polite" data-count>4 projects</p>
     <div id="project-grid" class="project-grid-full">
       <ProjectCard
         href="/projects/dynamic-transport/"
@@ -80,7 +78,9 @@ import bezierCurve from "../../assets/images/bezier-demo.gif";
         filterTags="Python,OpenGL"
       />
     </div>
-  </div>
+    </div>
+    </section>
+  </main>
 </SiteLayout>
 
 <script>
@@ -88,11 +88,14 @@ import bezierCurve from "../../assets/images/bezier-demo.gif";
   const cards = document.querySelectorAll("[data-card]");
 
   buttons.forEach((btn) => {
+    btn.setAttribute("aria-pressed", String(btn.getAttribute("data-tag") === "All"));
     btn.addEventListener("click", () => {
       const tag = btn.getAttribute("data-tag");
-      buttons.forEach((b) =>
-        b.classList.toggle("is-active", b.getAttribute("data-tag") === tag),
-      );
+      buttons.forEach((b) => {
+        const active = b.getAttribute("data-tag") === tag;
+        b.classList.toggle("is-active", active);
+        b.setAttribute("aria-pressed", String(active));
+      });
       cards.forEach((card) => {
         const tags = (card.getAttribute("data-tags") ?? "").split(",");
         card.classList.toggle(
@@ -100,29 +103,9 @@ import bezierCurve from "../../assets/images/bezier-demo.gif";
           !(tag === "All" || tags.includes(tag ?? "")),
         );
       });
+      const count = [...cards].filter(card => !card.classList.contains("is-hidden")).length;
+      const status = document.querySelector("[data-count]");
+      if (status) status.textContent = `${count} ${count === 1 ? "project" : "projects"}`;
     });
   });
 </script>
-
-<style>
-  .intro-section {
-    padding: 90px 32px 30px;
-  }
-
-  .grid-section {
-    padding: 40px 32px 100px;
-  }
-
-  .filter-bar {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 36px;
-  }
-
-  .project-grid-full {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-  }
-</style>

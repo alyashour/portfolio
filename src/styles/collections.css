@@ -1,0 +1,21 @@
+body.sculptural-editorial .collection-surface {
+  --color-text:#302820; --color-text-secondary:#625747; --color-accent:#51412d; --color-accent-hover:#302820;
+  --color-border:#c7bba7; --color-thumb-border:transparent;
+  color:var(--color-text); background:linear-gradient(#f1e9dbe8,#f1e9dbe8),url('/design-system/limestone.png') center/900px;
+  padding:64px clamp(1.5rem,5vw,5rem) 100px;
+}
+.collection-inner { max-width:1320px; margin:auto; }
+.collection-surface .filter-bar { display:flex; flex-wrap:wrap; gap:8px 24px; border-bottom:1px solid #c7bba7; padding-bottom:24px; }
+.collection-surface .filter-btn { border:0; border-radius:0; padding:12px 0; background:transparent; color:#625747; font-family:Inter,sans-serif; min-height:44px; cursor:pointer; }
+.collection-surface .filter-btn.is-active { color:#302820; box-shadow:0 2px #302820; background:transparent; }
+.collection-count { font-size:11px; text-transform:uppercase; letter-spacing:.15em; margin:24px 0 40px; }
+.collection-surface .project-grid-full { display:grid; grid-template-columns:1fr 1fr; gap:64px 48px; }
+body.sculptural-editorial .collection-surface .project-card-img { aspect-ratio:16/10; border:0; border-radius:0; margin-bottom:24px; background:#302820; object-fit:contain; }
+body.sculptural-editorial .collection-surface .project-card-title { font-size:clamp(1.7rem,3vw,2.6rem); font-weight:400; text-transform:uppercase; line-height:1.15; margin-bottom:18px; }
+body.sculptural-editorial .collection-surface .badge { background:transparent; color:#625747; border:0; border-radius:0; padding:0; text-transform:uppercase; letter-spacing:.1em; font-size:10px; }
+body.sculptural-editorial .collection-surface .badge-row { gap:18px; margin-bottom:16px; }
+body.sculptural-editorial .collection-surface .project-card-desc { max-width:48ch; line-height:1.8; }
+body.sculptural-editorial .collection-surface .project-card-github { display:inline-flex; align-items:center; min-height:44px; border-bottom:1px solid #c7bba7; }
+body.sculptural-editorial .collection-surface :focus-visible { outline-color:#51412d; }
+.collection-surface .is-hidden { display:none; }
+@media(max-width:650px) { .collection-surface .project-grid-full { grid-template-columns:1fr; gap:48px; } body.sculptural-editorial .collection-surface { padding-top:40px; } }
