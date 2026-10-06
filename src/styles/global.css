@@ -44,31 +44,6 @@ a:hover {
   color: var(--color-accent-hover);
 }
 
-/* layout primitives */
-
-.page-title {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  font-size: 44px;
-  margin: 0 0 14px;
-}
-
-/* buttons */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  font-family: var(--font-serif);
-  font-weight: 600;
-  font-size: 14px;
-  border-radius: 4px;
-  padding: 11px 22px;
-}
-
-.btn-outline {
-  color: var(--color-accent);
-  border: 1px solid var(--color-accent);
-}
-
 /* badges */
 .badge-row {
   display: flex;
@@ -82,38 +57,4 @@ a:hover {
   border-radius: 3px;
   background: var(--color-badge-bg);
   color: var(--color-badge-text);
-}
-
-/* images */
-.thumb {
-  filter: sepia(0.22) saturate(0.82) contrast(1.05);
-  border: 6px solid var(--color-thumb-border);
-  outline: 1px solid var(--color-border-strong);
-}
-
-.thumb-hero {
-  filter: sepia(0.22) saturate(0.82) contrast(1.05);
-  border: 8px solid var(--color-thumb-border);
-  outline: 1px solid var(--color-border-strong);
-}
-
-/* filter buttons (project list) */
-.filter-btn {
-  font-family: var(--font-body);
-  font-size: 13px;
-  padding: 7px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  background: transparent;
-  border: 1px solid var(--color-border-strong);
-  color: var(--color-text);
-}
-
-.filter-btn.is-active {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
-}
-
-.is-hidden {
-  display: none;
 }

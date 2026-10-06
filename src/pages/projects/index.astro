@@ -109,3 +109,49 @@ import bezierCurve from "../../assets/projects/bezier-demo.gif";
     });
   });
 </script>
+
+<style>
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+    border-bottom: 1px solid var(--color-border);
+    border-color: var(--color-border);
+    padding-bottom: 24px;
+  }
+
+  .filter-btn {
+    border: 0;
+    border-radius: 0;
+    padding: 12px 0;
+    background: transparent;
+    color: var(--color-text-secondary);
+    font-family: Inter, sans-serif;
+    font-size: 13px;
+    min-height: 44px;
+    cursor: pointer;
+  }
+
+  .filter-btn.is-active {
+    color: var(--color-accent);
+    box-shadow: 0 2px var(--color-accent);
+    background: transparent;
+  }
+
+  .collection-count {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    margin: 24px 0 40px;
+  }
+
+  .project-grid-full {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px 48px;
+  }
+
+  @media(max-width:650px) {
+    .project-grid-full { grid-template-columns: 1fr; gap: 48px; }
+  }
+</style>

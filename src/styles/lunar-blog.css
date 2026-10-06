@@ -5,21 +5,5 @@ body.sculptural-editorial.lunar-blog {
  --color-border:#465366; --color-border-strong:#7da77b;
   --color-slate:#91a4c0; background:var(--color-bg);
 }
-body.sculptural-editorial.lunar-blog .page { background:var(--color-bg); color:var(--color-text); }
 body.lunar-blog :focus-visible { outline-color:var(--color-accent); }
-body.lunar-blog .nav-link[aria-current="page"] { text-decoration:underline; text-underline-offset:6px; }
-.lunar-cover { position:relative; isolation:isolate; min-height:620px; display:flex; align-items:center; overflow:hidden; }
-.lunar-art { position:absolute; inset:0; z-index:-2; }
-.lunar-art img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:right 38%; }
-.lunar-cover::after { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,rgba(7,19,31,.35),transparent 65%),linear-gradient(0deg,#07131f,transparent 35%),linear-gradient(180deg,rgba(7,19,31,.65),transparent 20%); }
-.lunar-copy { width:100%; padding:140px clamp(1.5rem,5vw,5rem) 90px; }
-.lunar-copy h1 { font:400 clamp(4rem,10vw,10rem)/1 Anton,Impact,sans-serif; letter-spacing:-.02em; margin:0 0 24px; }
-body.sculptural-editorial.lunar-blog .collection-surface { --color-text:#f0dfc2; --color-text-secondary:#c0c8d3; --color-accent:#a7c7a2; --color-accent-hover:#f0dfc2; --color-border:#465366; background:var(--color-bg); border-top:1px solid var(--color-border); }
-body.lunar-blog .stone-detail { object-fit:cover; }
-@media(max-width:650px) {
- .lunar-cover { min-height:580px; align-items:end; }
- .lunar-art img { object-position:78% top; }
- .lunar-copy { padding-top:290px; padding-bottom:60px; }
- .lunar-copy h1 { font-size:clamp(3.6rem,17vw,6rem); max-width:6ch; }
- .lunar-cover::after { background:linear-gradient(0deg,#07131f,rgba(7,19,31,.8) 35%,transparent 80%); }
-}
+body.sculptural-editorial.lunar-blog .collection-surface { --color-text:#f0dfc2; --color-text-secondary:#c0c8d3; --color-accent:#a7c7a2; --color-accent-hover:#f0dfc2; --color-border:#465366; background:var(--color-bg); }
